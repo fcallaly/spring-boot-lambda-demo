@@ -18,7 +18,7 @@ public class StringOpController {
     @GetMapping(path = "/ping/{input}")
     public Map<String, String> ping(@PathVariable String input) {
         Map<String, String> pong = new HashMap<>();
-        pong.put("pong", "Hello, " + input + "!");
+        pong.put("pong", "received: " + input);
         return pong;
     }
 

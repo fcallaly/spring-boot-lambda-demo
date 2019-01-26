@@ -49,7 +49,7 @@ public class StreamLambdaHandlerTest {
         assertFalse(response.isBase64Encoded());
 
         assertTrue(response.getBody().contains("pong"));
-        assertTrue(response.getBody().contains("Hello, 1234!"));
+        assertTrue(response.getBody().contains("received: 1234"));
 
         assertTrue(response.getMultiValueHeaders().containsKey(HttpHeaders.CONTENT_TYPE));
         assertTrue(response.getMultiValueHeaders().getFirst(HttpHeaders.CONTENT_TYPE).startsWith(MediaType.APPLICATION_JSON));
