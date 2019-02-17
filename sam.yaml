@@ -5,6 +5,11 @@ Globals:
   Api:
     EndpointConfiguration: REGIONAL
 
+Parameters:
+  UserApiName:
+    Type: String
+    Description: API Name for this user
+
 Resources:
   LambdaDemoFunction:
     Type: AWS::Serverless::Function
@@ -27,4 +32,5 @@ Outputs:
     Description: URL for application
     Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/str'
     Export:
-      Name: LambdaDemoApi
+      Name:
+        Ref: UserApiName
